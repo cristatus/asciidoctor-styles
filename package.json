@@ -8,8 +8,17 @@
     "yarn": ">= 1.22.4"
   },
   "scripts": {
+    "css": "node scripts/compile-scss.js",
+    "css-minify": "node scripts/minify-css.js",
+    "asciidoc": "node scripts/convert-adoc.js",
     "format": "prettier --write \"**/*.{js,json,scss}\"",
+    "build": "npm-run-all css css-minify asciidoc",
+    "clean": "rimraf css build"
   },
+  "files": [
+    "scss/**/*.scss",
+    "css/**/*.{css,map}"
+  ],
   "devDependencies": {
     "@asciidoctor/core": "^2.1.1",
     "clean-css": "^4.2.3",
