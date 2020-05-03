@@ -13,7 +13,10 @@
     "asciidoc": "node scripts/convert-adoc.js",
     "format": "prettier --write \"**/*.{js,json,scss}\"",
     "build": "npm-run-all css css-minify asciidoc",
-    "clean": "rimraf css build"
+    "clean": "rimraf css build",
+    "watch:scss": "chokidar \"scss/**\" --initial --silent --command \"yarn css\"",
+    "watch:adoc": "chokidar \"adoc/**\" --initial --silent --command \"yarn asciidoc\"",
+    "watch": "npm-run-all --parallel watch:*"
   },
   "files": [
     "scss/**/*.scss",
@@ -21,6 +24,7 @@
   ],
   "devDependencies": {
     "@asciidoctor/core": "^2.1.1",
+    "chokidar-cli": "^2.1.0",
     "clean-css": "^4.2.3",
     "mkdirp": "^1.0.4",
     "node-sass": "^4.14.0",
