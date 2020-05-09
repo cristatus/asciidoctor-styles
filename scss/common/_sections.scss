@@ -1,0 +1,115 @@
+#header,
+#content,
+#footnotes {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  #header,
+  #content,
+  #footnotes {
+    max-width: 60em;
+  }
+}
+
+#header {
+  border-bottom: 1px solid var(--border);
+
+  > h1:first-child {
+    color: var(--text);
+    margin-bottom: 0;
+  }
+
+  #toc {
+    border-top: 1px solid var(--border);
+    padding-top: 1em;
+
+    ul {
+      list-style: none;
+      padding-left: 1.25em;
+    }
+
+    > ul {
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    a {
+      text-decoration: none;
+      &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 0.25em;
+    color: var(--text-secondary);
+
+    span.email a {
+      color: var(--text);
+    }
+
+    br {
+      display: none;
+      + span:before {
+        content: "\00a0\2013\00a0";
+      }
+      + span.author:before {
+        content: "\00a0\22c5\00a0";
+        color: var(--text-secondary);
+      }
+      + span#revremark:before {
+        content: "\00a0|\00a0";
+      }
+    }
+  }
+
+  #revnumber {
+    text-transform: capitalize;
+  }
+
+  #revnumber:after {
+    content: "\00a0";
+  }
+}
+
+#toctitle {
+  @extend h4;
+}
+
+// toc within content
+#content #toc {
+  @include panel();
+}
+
+#footnotes {
+  hr {
+    width: 7em;
+    margin-bottom: 0.5em;
+  }
+
+  .footnote {
+    font-size: 0.9em;
+  }
+}
+
+#footer {
+  max-width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1em;
+  margin-top: 1em;
+}
+
+#footer-text {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sect1 + .sect1 {
+  border-top: 1px solid var(--divider);
+  margin-top: 2em;
+}

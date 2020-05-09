@@ -1,0 +1,79 @@
+:root {
+  --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  --font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+
+  --font-body: var(--font-family-sans);
+  --font-heading: var(--font-family-sans);
+  --font-subheading: var(--font-family-serif);
+  --font-heading-weight: 300;
+
+  --background: #fff;
+  --background-panel: #fafafa;
+
+  --text: rgba(0, 0, 0, 0.87);
+  --text-secondary: rgba(0, 0, 0, 0.54);
+  --text-disabled: rgba(0, 0, 0, 0.38);
+
+  --link: #3f51b5;
+  --link-hover: #3f51b5;
+
+  --border: rgba(0, 0, 0, 0.06);
+  --divider: rgba(0, 0, 0, 0.12);
+
+  --h1-font-size: 2.5em;
+  --h2-font-size: 2em;
+  --h3-font-size: 1.75em;
+  --h4-font-size: 1.5em;
+  --h5-font-size: 1.25em;
+  --h6-font-size: 1em;
+
+  --code-text: var(--text);
+  --code-background: rgba(255, 230, 102, 0.2);
+
+  --tip: rgb(76, 174, 79);
+  --tip-border: rgb(76, 174, 79, 0.4);
+  --tip-background: rgb(76, 174, 79, 0.1);
+
+  --note: rgb(32, 148, 243);
+  --note-border: rgba(32, 148, 243, 0.4);
+  --note-background: rgba(32, 148, 243, 0.1);
+
+  --caution: rgb(211, 49, 49);
+  --caution-border: rgb(211, 49, 49, 0.4);
+  --caution-background: rgb(211, 49, 49, 0.1);
+
+  --important: rgb(244, 64, 52);
+  --important-border: rgb(244, 64, 52, 0.4);
+  --important-background: rgb(244, 64, 52, 0.1);
+
+  --warning: rgb(255, 153, 0);
+  --warning-border: rgb(255, 153, 0, 0.4);
+  --warning-background: rgb(255, 153, 0, 0.1);
+}
+
+body.dark {
+  --link: #f48fb1;
+  --link-hover: #f48fb1;
+
+  --text: #fff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+
+  --background: #303030;
+  --background-panel: rgba(0, 0, 0, 0.2);
+
+  --border: rgba(255, 255, 255, 0.12);
+  --divider: rgba(255, 255, 255, 0.12);
+
+  --code-text: var(--text);
+  --code-background: rgba(255, 229, 100, 0.2);
+
+  --tip-background: rgb(76, 174, 79, 0.05);
+  --note-background: rgba(32, 148, 243, 0.05);
+  --caution-background: rgb(211, 49, 49, 0.05);
+  --important-background: rgb(244, 64, 52, 0.05);
+  --warning-background: rgb(255, 153, 0, 0.05);
+}

@@ -13,7 +13,7 @@ function convert(file, { standalone = true, attributes = {} } = {}) {
     attributes: {
       ...attributes,
       linkcss: true,
-      stylesheet: "../css/asciidoctor.css",
+      stylesheet: "../css/asciidoctor-next.css",
       imagesdir: "../adoc/images",
     },
   })

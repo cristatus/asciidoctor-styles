@@ -1,0 +1,80 @@
+span.icon > .fa {
+  cursor: default;
+  a & {
+    cursor: inherit;
+  }
+}
+
+.admonitionblock td.icon {
+  [class^="fa icon-"] {
+    font-size: 2.5em;
+    text-shadow: none;
+    cursor: default;
+  }
+
+  .icon-note:before {
+    content: "\f05a";
+    color: var(--note);
+  }
+
+  .icon-tip:before {
+    content: "\f0eb";
+    text-shadow: none;
+    color: var(--tip);
+  }
+
+  .icon-warning:before {
+    content: "\f071";
+    color: var(--warning);
+  }
+
+  .icon-caution:before {
+    content: "\f06d";
+    color: var(--caution);
+  }
+
+  .icon-important:before {
+    content: "\f06a";
+    color: var(--important);
+  }
+}
+
+.conum[data-value] {
+  display: inline-block;
+  color: var(--background) !important;
+  background-color: var(--text);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 0.75em;
+  width: 1.67em;
+  height: 1.67em;
+  line-height: 1.67em;
+  font-family: var(--font-body);
+  font-style: normal;
+  font-weight: 500;
+
+  * {
+    color: var(--text) !important;
+  }
+
+  + b {
+    display: none;
+  }
+
+  &:after {
+    content: attr(data-value);
+  }
+
+  pre & {
+    position: relative;
+    top: -0.125em;
+  }
+}
+
+b.conum * {
+  color: inherit !important;
+}
+
+.conum:not([data-value]):empty {
+  display: none;
+}

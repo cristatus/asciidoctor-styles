@@ -1,0 +1,15 @@
+@mixin panel($bg: var(--background-panel), $border-color: var(--border)) {
+  background: $bg;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+
+  margin-bottom: 1.25em;
+  padding: 1.25em;
+
+  & > :first-child {
+    margin-top: 0;
+  }
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}

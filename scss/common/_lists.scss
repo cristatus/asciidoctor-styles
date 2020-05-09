@@ -1,0 +1,84 @@
+ol,
+ul {
+  padding-left: 1.25em;
+}
+
+dl dt {
+  font-weight: bold;
+}
+
+dl dd {
+  margin-left: 1.25em;
+  > :first-child {
+    margin-top: 0.5em;
+  }
+}
+
+ul.checklist {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0.625em;
+}
+
+// use consistent size for checkbox
+ul.checklist li > p:first-child > .fa-square-o:first-child,
+ul.checklist li > p:first-child > .fa-check-square-o:first-child {
+  width: 1.25em;
+  font-size: 0.8em;
+  position: relative;
+  bottom: 0.125em;
+}
+
+ul.checklist li > p:first-child > input[type="checkbox"]:first-child {
+  margin-right: 0.25em;
+}
+
+.hdlist > table,
+.colist > table {
+  border: 0;
+  background: none; // FIXME this wouldn't be required if a background was set on table.tableblock and not table
+  > tbody > tr {
+    background: none;
+  }
+}
+
+td.hdlist1,
+td.hdlist2 {
+  vertical-align: top;
+}
+
+td.hdlist1 {
+  font-weight: bold;
+}
+
+td.hdlist2 {
+  :first-child {
+    margin-top: 0;
+  }
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.literalblock + .colist,
+.listingblock + .colist {
+  margin-top: -0.5em;
+}
+
+// NOTE be less specific so as not to override nested source block
+.colist td:not([class]) {
+  // number column
+  &:first-child {
+    padding: 0.4em 0.75em 0 0.75em;
+    line-height: 1;
+    vertical-align: top;
+    img {
+      max-width: none;
+    }
+  }
+
+  // text column
+  &:last-child {
+    padding: 0.25em 0;
+  }
+}

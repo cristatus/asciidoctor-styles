@@ -1,0 +1,178 @@
+details,
+.audioblock,
+.imageblock,
+.literalblock,
+.listingblock,
+.stemblock,
+.videoblock {
+  margin-bottom: 1em;
+}
+
+.admonitionblock td.content,
+.audioblock,
+.exampleblock,
+.imageblock,
+.listingblock,
+.literalblock,
+.stemblock,
+.openblock,
+.paragraph,
+.quoteblock,
+table.tableblock,
+.verseblock,
+.videoblock,
+.dlist,
+.olist,
+.ulist,
+.qlist,
+.hdlist {
+  > .title {
+    color: var(--text-secondary);
+    text-align: left;
+    font-family: var(--font-subheading);
+    font-weight: var(--font-heading-weight);
+    font-size: 1rem;
+    font-style: italic;
+  }
+}
+
+.paragraph.lead > p,
+#preamble > .sectionbody > [class="paragraph"]:first-of-type p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.exampleblock > .content {
+  @include panel(var(--background-panel), var(--border));
+}
+
+.sidebarblock {
+  @include panel();
+
+  > .content {
+    > .title {
+      @extend h3;
+      color: var(--text-secondary);
+      margin-top: 0;
+      text-align: left;
+    }
+  }
+}
+
+:not(.openblock) > .content .paragraph {
+  > p:first-child {
+    margin-top: 0;
+  }
+  > p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.literalblock pre,
+.listingblock > .content > pre {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  word-wrap: break-word;
+  overflow-x: auto;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background-color: var(--background-panel);
+}
+
+.listingblock {
+  // give floating language text a place to drop anchor
+  > .content {
+    position: relative;
+  }
+
+  code[data-lang]:before {
+    display: none;
+    content: attr(data-lang);
+    position: absolute;
+    font-size: 0.8rem;
+    top: 0.425rem;
+    right: 0.5rem;
+    line-height: 1;
+    text-transform: uppercase;
+    color: inherit;
+    opacity: 0.5;
+  }
+
+  &:hover code[data-lang]:before {
+    display: block;
+  }
+}
+
+.quoteblock,
+.verseblock {
+  margin: 1.25em 0;
+  padding-left: 1.25em;
+  border-left: 4px solid var(--divider);
+
+  .attribution {
+    font-size: 0.9rem;
+    line-height: 1.45;
+    font-style: italic;
+    br {
+      display: none;
+    }
+    cite {
+      display: block;
+      letter-spacing: -0.025em;
+      color: var(--text-secondary);
+    }
+  }
+}
+
+.quoteblock {
+  blockquote {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  blockquote,
+  p {
+    font-style: italic;
+  }
+}
+
+.verseblock {
+  pre {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-weight: 300;
+    strong {
+      font-weight: 400;
+    }
+  }
+}
+
+.admonitionblock {
+  table {
+    border: 0;
+    background: transparent;
+  }
+
+  border-left: 4px solid var(--divider);
+  background-color: var(--background-panel);
+
+  td.icon {
+    text-align: center;
+    padding-left: 1em;
+    .title {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  @each $name in (note tip warning caution important) {
+    &.#{$name} {
+      border-color: var(--#{$name}-border);
+      background-color: var(--#{$name}-background);
+      td.icon {
+        color: var(--#{$name});
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.print-only {
+  display: none !important;
+}
+
+@page {
+  margin: 1.25cm 0.75cm;
+}
+
+@media print {
+  * {
+    box-shadow: none;
+    text-shadow: none !important;
+  }
+  html {
+    font-size: 80%;
+  }
+  a {
+    color: inherit !important;
+    text-decoration: underline !important;
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  pre,
+  blockquote,
+  tr,
+  img,
+  object,
+  svg {
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+
+  image,
+  object,
+  embed,
+  svg {
+    max-width: 100%;
+  }
+
+  p,
+  blockquote,
+  dt,
+  td.content {
+    font-size: 1em;
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3,
+  #toctitle,
+  .sidebarblock > .content > .title {
+    page-break-after: avoid;
+  }
+  #toc,
+  .sidebarblock,
+  .exampleblock > .content {
+    background: none !important;
+  }
+
+  .admonitionblock,
+  .quoteblock,
+  .verseblock {
+    page-break-inside: avoid;
+  }
+}

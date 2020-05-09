@@ -1,0 +1,171 @@
+table {
+  background: var(--background);
+  margin-bottom: 1.25em;
+  border: 1px solid var(--border);
+  border-spacing: 0;
+
+  thead,
+  tfoot {
+    background: var(--background);
+    font-weight: var(--font-weight-medium, 500);
+
+    tr {
+      th,
+      td {
+        padding: 0.5em 0.625em 0.625em;
+        font-size: inherit;
+        color: var(--text-secondary);
+        text-align: left;
+      }
+    }
+  }
+
+  tr {
+    th,
+    td {
+      padding: 0.5625em 0.625em;
+      font-size: inherit;
+      color: var(--text);
+    }
+
+    &.even,
+    &.alt {
+      background: rgba(0, 0, 0, 0.04);
+    }
+  }
+
+  thead tr th,
+  tfoot tr th,
+  tbody tr td,
+  tr td,
+  tfoot tr td {
+    display: table-cell;
+    line-height: 1.6;
+  }
+}
+
+table.tableblock {
+  max-width: 100%;
+  border-collapse: separate;
+}
+
+p.tableblock {
+  margin-top: 0;
+}
+
+p.tableblock:last-child {
+  margin-bottom: 0;
+}
+
+// NOTE compensate for bottom margin on last block in AsciiDoc table cell
+td.tableblock > .content {
+  margin-bottom: 1.25em;
+  > :last-child {
+    margin-bottom: -1.25em;
+  }
+}
+
+table.tableblock,
+th.tableblock,
+td.tableblock {
+  border: 0 solid var(--border);
+}
+
+table.grid-all > thead > tr > .tableblock,
+table.grid-all > tbody > tr > .tableblock {
+  border-width: 0 1px 1px 0;
+}
+
+table.grid-all > tfoot > tr > .tableblock {
+  border-width: 1px 1px 0 0;
+}
+
+table.grid-cols > * > tr > .tableblock {
+  border-width: 0 1px 0 0;
+}
+
+table.grid-rows > thead > tr > .tableblock,
+table.grid-rows > tbody > tr > .tableblock {
+  border-width: 0 0 1px 0;
+}
+
+table.grid-rows > tfoot > tr > .tableblock {
+  border-width: 1px 0 0 0;
+}
+
+table.grid-all > * > tr > .tableblock:last-child,
+table.grid-cols > * > tr > .tableblock:last-child {
+  border-right-width: 0;
+}
+
+table.grid-all > tbody > tr:last-child > .tableblock,
+table.grid-all > thead:last-child > tr > .tableblock,
+table.grid-rows > tbody > tr:last-child > .tableblock,
+table.grid-rows > thead:last-child > tr > .tableblock {
+  border-bottom-width: 0;
+}
+
+table.frame-all {
+  border-width: 1px;
+}
+
+table.frame-sides {
+  border-width: 0 1px;
+}
+
+table.frame-topbot,
+table.frame-ends {
+  border-width: 1px 0;
+}
+
+table.stripes-all tr,
+table.stripes-odd tr:nth-of-type(odd),
+table.stripes-even tr:nth-of-type(even),
+table.stripes-hover tr:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+@each $halign in (left, right, center) {
+  th.halign-#{$halign},
+  td.halign-#{$halign} {
+    text-align: $halign;
+  }
+}
+
+@each $valign in (top, bottom, middle) {
+  th.valign-#{$valign},
+  td.valign-#{$valign} {
+    vertical-align: $valign;
+  }
+}
+
+table thead th,
+table tfoot th {
+  font-weight: var(--font-weight-medium);
+}
+
+// vertical table header (block)
+tbody tr th {
+  display: table-cell;
+  line-height: 1.6;
+  background: var(--background);
+}
+
+// vertical table header (content)
+tbody tr th,
+tfoot tr th {
+  &,
+  p {
+    color: var(--text-secondary);
+    font-weight: var(--font-weight-medium);
+  }
+}
+
+p.tableblock > code:only-child {
+  background: none;
+  padding: 0;
+}
+
+p.tableblock {
+  font-size: 1em;
+}
