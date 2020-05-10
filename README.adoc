@@ -33,6 +33,10 @@ Run rhe following command when you are working with the source:
 
 It will automatically build css files and generate example docs for testing.
 
+== Screenshots
+
+image::screenshots.gif[]
+
 == License
 
 The theme is released under MIT license and partially based on the original
