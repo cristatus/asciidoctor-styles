@@ -8,7 +8,7 @@ Amit Mendapara
 The purpose of this project is to provide an alternative {url-asciidoctor}[asciidoctor]
 stylesheet which is easy to integrate with other css frameworks or designs.
 
-The project provides a new stylesheet `asciidoctor-ng.css` based on material design color palette
+The project provides a new stylesheet `asciidoctor-next.css` based on material design color palette
 and supports light and dark modes.
 
 == How to build
