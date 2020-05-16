@@ -115,7 +115,7 @@ table.tableblock,
 .verseblock {
   margin: 1.25em 0;
   padding-left: 1.25em;
-  border-left: 4px solid var(--divider);
+  border-left: 6px solid var(--divider);
 
   .attribution {
     font-size: 0.9rem;
@@ -161,7 +161,8 @@ table.tableblock,
     background: transparent;
   }
 
-  border-left: 4px solid var(--divider);
+  border-left: 6px solid var(--divider);
+  border-radius: 4px;
   background-color: var(--background-panel);
 
   td.icon {
