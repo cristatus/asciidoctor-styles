@@ -35,24 +35,28 @@
   --code-background: rgba(255, 230, 102, 0.2);
 
   --tip: rgb(76, 174, 79);
-  --tip-border: rgb(76, 174, 79, 0.4);
-  --tip-background: rgb(76, 174, 79, 0.1);
+  --tip-border: rgba(76, 174, 79, 0.4);
+  --tip-background: rgba(76, 174, 79, 0.1);
 
   --note: rgb(32, 148, 243);
   --note-border: rgba(32, 148, 243, 0.4);
   --note-background: rgba(32, 148, 243, 0.1);
 
   --caution: rgb(211, 49, 49);
-  --caution-border: rgb(211, 49, 49, 0.4);
-  --caution-background: rgb(211, 49, 49, 0.1);
+  --caution-border: rgba(211, 49, 49, 0.4);
+  --caution-background: rgba(211, 49, 49, 0.1);
 
   --important: rgb(244, 64, 52);
-  --important-border: rgb(244, 64, 52, 0.4);
-  --important-background: rgb(244, 64, 52, 0.1);
+  --important-border: rgba(244, 64, 52, 0.4);
+  --important-background: rgba(244, 64, 52, 0.1);
 
   --warning: rgb(255, 153, 0);
-  --warning-border: rgb(255, 153, 0, 0.4);
-  --warning-background: rgb(255, 153, 0, 0.1);
+  --warning-border: rgba(255, 153, 0, 0.4);
+  --warning-background: rgba(255, 153, 0, 0.1);
+}
+
+body {
+  transition: color 0.2s ease-out 0s, background-color 0.2s ease-out 0s, border-color 0.2s ease-out 0s;
 }
 
 body.dark {
@@ -71,9 +75,9 @@ body.dark {
   --code-text: var(--text);
   --code-background: rgba(255, 229, 100, 0.2);
 
-  --tip-background: rgb(76, 174, 79, 0.05);
+  --tip-background: rgba(76, 174, 79, 0.05);
   --note-background: rgba(32, 148, 243, 0.05);
-  --caution-background: rgb(211, 49, 49, 0.05);
-  --important-background: rgb(244, 64, 52, 0.05);
-  --warning-background: rgb(255, 153, 0, 0.05);
+  --caution-background: rgba(211, 49, 49, 0.05);
+  --important-background: rgba(244, 64, 52, 0.05);
+  --warning-background: rgba(255, 153, 0, 0.05);
 }
