@@ -2,10 +2,6 @@
   display: none !important;
 }
 
-@page {
-  margin: 1.25cm 0.75cm;
-}
-
 @media print {
   * {
     box-shadow: none;
@@ -64,5 +60,11 @@
   .quoteblock,
   .verseblock {
     page-break-inside: avoid;
+  }
+
+  #header,
+  #content,
+  #footnotes {
+    padding: 0 1.5rem;
   }
 }
