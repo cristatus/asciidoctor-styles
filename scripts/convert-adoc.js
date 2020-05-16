@@ -19,10 +19,13 @@ function convert(file, { standalone = true, attributes = {} } = {}) {
 
   asciidoctor.convertFile(file, {
     standalone,
+    base_dir: path.join(adocDir, "examples"),
     to_dir: buildDir,
+    safe: "unsafe",
     mkdirs: true,
     attributes: {
       ...attributes,
+      docinfo: "shared-head",
       linkcss: true,
       stylesheet: "../css/asciidoctor-next.css",
       imagesdir: "../adoc/images",

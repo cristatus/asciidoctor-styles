@@ -1,0 +1,122 @@
+<template id="theme-toggle-template">
+  <div class="theme-toggle">
+    <input type="checkbox" class="theme-toggle-input" />
+    <span class="theme-toggle-thumb"></span>
+    <span class="theme-toggle-icon"></span>
+  </div>
+</template>
+
+<style>
+  #header > h1:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .theme-toggle {
+    position: relative;
+  }
+
+  .theme-toggle-input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  .theme-toggle-thumb::before,
+  .theme-toggle-thumb::after {
+    content: "";
+    display: block;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .theme-toggle-thumb::after {
+    transition: all 0.2s ease;
+  }
+
+  .theme-toggle-thumb::before {
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    background-color: #4d4d4d;
+    left: -2.25rem;
+    width: 3.125rem;
+    pointer-events: all;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+  }
+
+  .theme-toggle-thumb::after {
+    border: 1px solid #4d4d4d;
+    background-color: #fafafa;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .theme-toggle-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0 4px;
+  }
+
+  .theme-toggle-icon::after,
+  .theme-toggle-icon::before {
+    display: inline-block;
+    font-size: 1rem;
+    transition: opacity 0.25s ease;
+  }
+
+  .theme-toggle-icon::after {
+    content: "\1F31E";
+  }
+
+  .theme-toggle-icon::before {
+    content: "\1F31C";
+    opacity: 0;
+  }
+
+  .theme-toggle-input:checked ~ .theme-toggle-icon::after {
+    opacity: 0;
+  }
+
+  .theme-toggle-input:checked ~ .theme-toggle-icon::before {
+    opacity: 1;
+  }
+
+  .theme-toggle-input:checked ~ .theme-toggle-thumb::after {
+    left: calc(3.125rem - 1.5rem);
+  }
+
+  .theme-toggle-input:focus ~ .theme-toggle-thumb::after {
+    box-shadow: 0 0 2px 3px #0099e0;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var tmpl = document.getElementById("theme-toggle-template")
+    var title = document.querySelector("#header > h1:first-child")
+
+    title.appendChild(tmpl.content.cloneNode(true))
+
+    var toggle = title.querySelector(".theme-toggle")
+    var input = title.querySelector(".theme-toggle-input")
+
+    toggle.addEventListener("click", function (e) {
+      if (e.target !== input) {
+        e.preventDefault()
+        input.focus()
+        input.click()
+        return
+      }
+      document.body.classList.toggle("dark", input.checked)
+    })
+  })
+</script>
