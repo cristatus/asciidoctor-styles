@@ -83,6 +83,13 @@ array-find-index@^1.0.1:
   resolved "https://registry.yarnpkg.com/array-find-index/-/array-find-index-1.0.2.tgz#df010aa1287e164bbda6f9723b0a96a1ec4187a1"
   integrity sha1-3wEKoSh+Fku9pvlyOwqWoexBh6E=
 
+asciidoctor-highlight.js@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/asciidoctor-highlight.js/-/asciidoctor-highlight.js-0.2.1.tgz#265411b6a54b0932e404cdd72a1228374c939709"
+  integrity sha512-nDsTOdVBf0e5/ua2bPiCj32rYQl/iprOR5LV79axuW9eMIadEH9LaXLVqDo+tAopQ1iPPmvIX9uhnO08js4kDg==
+  dependencies:
+    highlight.js "^9.0.0"
+
 asciidoctor-opal-runtime@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/asciidoctor-opal-runtime/-/asciidoctor-opal-runtime-0.3.0.tgz#df327a870ddd3cd5eb0e162d64ed4dcdd3fe3fee"
@@ -620,6 +627,11 @@ has@^1.0.3:
   integrity sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
   dependencies:
     function-bind "^1.1.1"
+
+highlight.js@^9.0.0:
+  version "9.18.1"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.18.1.tgz#ed21aa001fe6252bb10a3d76d47573c6539fe13c"
+  integrity sha512-OrVKYz70LHsnCgmbXctv/bfuvntIKDz177h0Co37DQ5jamGZLVmoCVMtjMtNZY3X9DrCcKfklHPNeA0uPZhSJg==
 
 hosted-git-info@^2.1.4:
   version "2.8.8"

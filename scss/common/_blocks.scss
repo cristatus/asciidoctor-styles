@@ -77,7 +77,14 @@ table.tableblock,
   overflow-x: auto;
   padding: 1rem;
   font-size: 0.9rem;
-  background-color: var(--background-panel);
+}
+
+// NOTE if highlight class is absent or in first position, we know source highlighter is not active
+.literalblock pre,
+.listingblock > .content > pre:not(.highlight),
+.listingblock > .content > pre[class="highlight"],
+.listingblock > .content > pre[class^="highlight "] {
+  background: var(--background-panel);
 }
 
 .listingblock {
