@@ -116,7 +116,7 @@
         input.click()
         return
       }
-      document.body.classList.toggle("dark", input.checked)
+      document.documentElement.setAttribute("data-theme", input.checked ? "dark" : "")
     })
   })
 </script>

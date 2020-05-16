@@ -67,7 +67,7 @@
   --hljs-symbol: #4078f2;
 }
 
-body.dark {
+html[data-theme="dark"] {
   --link: #f48fb1;
   --link-hover: #f48fb1;
 
