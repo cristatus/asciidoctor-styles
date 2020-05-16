@@ -60,7 +60,9 @@ strong strong {
 
 a {
   color: var(--link);
+  text-decoration: none;
   &:hover {
     color: var(--link-hover);
+    text-decoration: underline;
   }
 }
