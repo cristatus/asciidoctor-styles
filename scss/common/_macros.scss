@@ -1,0 +1,69 @@
+.keyseq,
+.menuseq,
+.menuref {
+  color: var(--text-secondary);
+}
+
+kbd {
+  display: inline-block;
+  font-family: var(--font-family-monospace);
+  font-size: 0.75em;
+  line-height: 1.45;
+  margin: 0 0.15em;
+  padding: 0.2em 0.5em;
+
+  color: var(--text-secondary);
+  background-color: var(--background-panel);
+
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  box-shadow: 0 1px 0 var(--border), 0 0 0 0.1em var(--background-panel) inset;
+
+  vertical-align: middle;
+  position: relative;
+  top: -0.1em;
+  white-space: nowrap;
+}
+
+.keyseq kbd:first-child {
+  margin-left: 0;
+}
+
+.keyseq kbd:last-child {
+  margin-right: 0;
+}
+
+.menuseq b:not(.caret),
+.menuref {
+  font-weight: inherit;
+}
+
+.menuseq {
+  word-spacing: -0.02em;
+  b.caret {
+    font-size: 1.25em;
+    line-height: 0.8;
+  }
+  i.caret {
+    font-weight: bold;
+    text-align: center;
+    width: 0.45em;
+  }
+}
+
+b.button:before,
+b.button:after {
+  position: relative;
+  top: -1px;
+  font-weight: normal;
+}
+
+b.button:before {
+  content: "[";
+  padding: 0 3px 0 2px;
+}
+
+b.button:after {
+  content: "]";
+  padding: 0 2px 0 3px;
+}
