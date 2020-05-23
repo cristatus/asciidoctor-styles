@@ -5,40 +5,6 @@ span.icon > .fa {
   }
 }
 
-.admonitionblock td.icon {
-  [class^="fa icon-"] {
-    font-size: 2em;
-    text-shadow: none;
-    cursor: default;
-  }
-
-  .icon-note:before {
-    content: "\f05a";
-    color: var(--note);
-  }
-
-  .icon-tip:before {
-    content: "\f0eb";
-    text-shadow: none;
-    color: var(--tip);
-  }
-
-  .icon-warning:before {
-    content: "\f071";
-    color: var(--warning);
-  }
-
-  .icon-caution:before {
-    content: "\f06d";
-    color: var(--caution);
-  }
-
-  .icon-important:before {
-    content: "\f06a";
-    color: var(--important);
-  }
-}
-
 .conum[data-value] {
   display: inline-block;
   color: var(--background) !important;

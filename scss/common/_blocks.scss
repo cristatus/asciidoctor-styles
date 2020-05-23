@@ -158,6 +158,7 @@ table.tableblock,
 .admonitionblock {
   table {
     border: 0;
+    border-collapse: collapse;
     background: transparent;
   }
 
@@ -166,12 +167,21 @@ table.tableblock,
   background-color: var(--background-panel);
 
   td.icon {
-    text-align: center;
-    padding-left: 1em;
-    .title {
+    position: absolute;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem;
+
+    i::after {
+      content: attr(title);
+      font-family: var(--font-body);
       font-weight: bold;
-      text-transform: uppercase;
+      font-size: 1rem;
     }
+  }
+
+  td.content {
+    padding: 3rem 1rem 1rem;
   }
 
   @each $name in (note tip warning caution important) {
