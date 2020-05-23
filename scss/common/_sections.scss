@@ -113,3 +113,40 @@
   border-bottom: 1px solid var(--divider);
   padding-bottom: 0.3rem;
 }
+
+h1,
+h2,
+h3,
+h5,
+h6,
+#toctitle,
+.content > .title {
+  > a.anchor {
+    position: absolute;
+    display: inline-block;
+    width: 2ex;
+    margin-left: -2ex;
+
+    text-decoration: none !important;
+    visibility: hidden;
+    text-align: center;
+
+    font-weight: normal;
+    font-size: 0.85em;
+    margin-top: 0.15em;
+
+    &:before {
+      content: "#";
+      display: block;
+    }
+  }
+
+  &:hover > a.anchor,
+  > a.anchor:hover {
+    visibility: visible;
+  }
+
+  > a.link {
+    text-decoration: none;
+  }
+}
