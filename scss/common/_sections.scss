@@ -109,7 +109,7 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-.sect1 + .sect1 {
-  border-top: 1px solid var(--divider);
-  margin-top: 2em;
+.sect1 > h2 {
+  border-bottom: 1px solid var(--divider);
+  padding-bottom: 0.3rem;
 }
