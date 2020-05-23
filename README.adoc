@@ -13,14 +13,14 @@ and supports light and dark modes.
 
 == How to build
 
-To setup the project, make sure you have Node and Yarn installed.
-Next, run yarn to install the required Node modules:
+To setup the project, make sure you have Node installed.
+Next, run `npm` to install the required Node modules:
 
- $ yarn install
+ $ npm i
 
 Once the Node modules installed, you can build the stylesheets with following commands:
 
- $ yarn build
+ $ npm build
 
 This command will create [.path]_asciidoctor-next.css_ and [.path]_asciidoctor-next.min.css_
 in the [.path]_css_ folder.
@@ -29,7 +29,7 @@ in the [.path]_css_ folder.
 
 Run rhe following command when you are working with the source:
 
- $ yarn watch
+ $ npm run watch
 
 It will automatically build css files and generate example docs for testing.
 
