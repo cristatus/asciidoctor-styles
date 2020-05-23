@@ -52,10 +52,13 @@ table.tableblock,
 
   > .content {
     > .title {
-      @extend h3;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: left;
       color: var(--text-secondary);
       margin-top: 0;
-      text-align: left;
+      margin-bottom: 1rem;
     }
   }
 }
