@@ -20,7 +20,7 @@ Next, run `npm` to install the required Node modules:
 
 Once the Node modules installed, you can build the stylesheets with following commands:
 
- $ npm build
+ $ npm run build
 
 This command will create [.path]_asciidoctor-next.css_ and [.path]_asciidoctor-next.min.css_
 in the [.path]_css_ folder.
